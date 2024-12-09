@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Clash Grotesk', sans-serif;
+    background-color: #F5F6FA;
+    overflow-x: hidden;
+    background-image: linear-gradient(#e0e0e0 1px, transparent 1px),
+                      linear-gradient(90deg, #e0e0e0 1px, transparent 1px);
+    background-size: 20px 20px; /* ajuste la taille du quadrillage ici */
+}
+
+
+/* Conteneur centré pour le contenu principal */
+.centered-container {
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.centered-text {
+    text-align: center;
+    max-width: 90vw;
+    line-height: 1.2;
+}
+
+.centered-text h1 {
+    font-size: 10vw;
+    color: #030405;
+    font-family: 'Clash Grotesk', sans-serif;
+}
+
+.main-footer {
+    text-align: center;
+    padding: 10px;
+    font-size: 22px;
+    font-family: 'Clash Grotesk', sans-serif;
+    color: #030405;
+}
+
+.right-aligned-text {
+    align-self: flex-end;
+    margin-right: 15vw;
+    color: #030405;
+    font-size: 3vw;
+    margin-top: 30px;
+}
+
+.arrow-down {
+    color: #030405;
+    font-size: 7vw;
+    position: relative;
+    top: 0px;
+    align-self: flex-start;
+    margin-left: 15vw;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+.separator-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px; /* Espace au-dessus de la ligne */
+}
+
+.line {
+    width: 80%; /* Largeur de la ligne */
+    height: 4px; /* Épaisseur de la ligne */
+    background-color: #030405; /* Couleur de la ligne */
+}
+
+
+/* Home square */
+.full-width-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.square-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.square1 {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    background-color: #ff0200;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #F5F6FA;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square2 {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    background-color: #1e2ffe;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #F5F6FA;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square-content1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.square-content1 h2 {
+    font-size: 5vw;
+    font-family: 'Gambetta', serif, regular;
+    margin-bottom: 10px;
+}
+
+.square-content1 p {
+    font-size: 1vw;
+    text-align: center;
+}
+
+.square-content2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.square-content2 h2 {
+    font-size: 5.5vw;
+    font-family: 'Technor', sans-serif;
+    margin-bottom: 10px;
+}
+
+.square-content2 p {
+    font-size: 1vw;
+    text-align: center;
+}
+
+.download {
+    font-size: 3vw; /* Augmente la taille du texte */
+    text-decoration: underline;
+    margin-top: 50px; /* Crée plus d’espace au-dessus */
+    line-height: 1.5; /* Augmente l'espacement entre les lignes si nécessaire */
+}
+
+
+.main-header {
+    width: 100%;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #030405;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 150px; /* Taille du logo */
+    height: auto; /* Conserve les proportions */
+}
+
+
+.info-link {
+    color: #030405; /* Noir pour le lien Info */
+    font-size: 1.5vw;
+    text-decoration: none;
+    font-family: 'Clash Grotesk', sans-serif;
+}
+
+.info-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    /* Corps et texte principal */
+    body, html {
+        font-size: 14px; /* Ajuste la taille globale de la police */
+    }
+
+    .main-header {
+        display: flex; /* Active le flexbox */
+        flex-direction: row; /* S'assure que les éléments sont alignés en ligne */
+        justify-content: space-between; /* Positionne le logo à gauche et le lien à droite */
+        align-items: center; /* Centre verticalement les éléments */
+    }
+
+    .centered-container {
+        height: 65vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .centered-text h1 {
+        font-size: 12vw; /* Ajuste la taille du titre */
+        width: 100%;
+    }
+
+    .right-aligned-text {
+        align-self: center; /* Centre le texte */
+        margin: 0;
+        margin-top: 10%;
+        font-size: 4vw; /* Ajuste la taille du texte */
+    }
+
+    .arrow-down {
+        align-self: center; /* Centre la flèche */
+        margin-right: 60%;
+        margin-top: 10%;
+        font-size: 20vw; /* Ajuste la taille de la flèche */
+    }
+
+    /* Header */
+    .main-header {
+        flex-direction: column; /* Passe le header en colonne */
+        align-items: center;
+    }
+
+    .logo-container {
+        justify-content: flex-start; /* Assure le positionnement à gauche */
+        width: 100%; /* Étend le conteneur pour éviter un centrage implicite */
+        padding-left: 10px;
+    }
+    
+    .logo-image {
+        width: 100px; /* Réduit la taille du logo */
+        height: auto; /* Conserve les proportions */
+    }
+    
+
+    .info-link {
+        font-size: 4vw; /* Ajuste la taille du texte pour mobile */
+        margin-left: 180px; /* Supprime tout décalage restant */
+        margin-right: 0;
+        text-decoration: underline;
+    }
+
+    /* Carrés dans la section principale */
+    .square-container {
+        grid-template-columns: 1fr; /* Passe à une seule colonne */
+        gap: 15px;
+    }
+
+    .square1, .square2 {
+        padding-top: 120%; /* Augmente la hauteur pour un meilleur aspect sur mobile */
+    }
+
+    .square-content1 h2, .square-content2 h2 {
+        font-size: 13vw; /* Ajuste la taille des titres */
+    }
+
+    .square-content1 p, .square-content2 p {
+        font-size: 3vw; /* Ajuste la taille du texte descriptif */
+    }
+
+    .download {
+        font-size: 4vw; /* Ajuste la taille du texte */
+    }
+
+    /* Footer */
+    .main-footer {
+        font-size: 4vw; /* Ajuste la taille du texte */
+    }
+}
+
+@media (max-width: 480px) {
+    .centered-text h1 {
+        font-size: 15vw; /* Encore plus grand pour les écrans très petits */
+    }
+
+    .right-aligned-text {
+        font-size: 5vw;
+    }
+
+    .arrow-down {
+        font-size: 10vw;
+    }
+
+    .square-content1 h2, .square-content2 h2 {
+        font-size: 8vw;
+    }
+
+    .square-content1 p, .square-content2 p {
+        font-size: 4vw;
+    }
+}
+
+
